@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobiletter</title>
+    <script src="js.js"></script>
+
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+<table>
+<tr>
+    <td>Velg Film:</td>
+    </tr>
+<tr><td><select id="film">
+    <option value = " " disabled selected> Velg film her</option>
+    <option>The Shining</option>
+    <option>The Exorcist</option>
+    <option>Psycho</option>
+    <option>A Nightmare on Elm Street</option>
+    <option>Halloween</option>
+    <option>The Conjuring</option>
+    <option>IT</option>
+    <option>Get Out</option>
+</select>
+    </td>
+   <td><div id="filmUt"></div></td></tr>
+</table>
+<br>
+<table>
+   <tr>
+       <td style= "font-size: 18px; font-weight: bolder;">Antall</td>
+       <td><input type="text" style="width: 25px" id="antall"/></td>
+       <td><div id="feilAntall"></div></td>
+   </tr>
+</table>
+<br>
+<table>
+
+<tr><td>Fornavn</td><td><input type="text" id="fornavn"/></td>
+    <td><div id="fornavnFeilmelding"></div></td></tr>
+
+<tr><td>Etternavn</td><td><input type="text" id="etternavn"/></td>
+    <td><div id="etternavnFeilmelding"></div></td></tr>
+
+    <tr><td>Telefonnr</td><td><input type="text" id="telefonnr"/></td>
+        <td><div id="telefonnrFeilmelding"></div></td></tr>
+
+    <tr><td>Epost</td><td><input type="text" id="epost"/></td>
+    <td><div id="epostFeilmelding"></div></td></tr>
+</table>
+
+<button onclick="kjopBillett()">Kjøp billett</button>
+
+    <h2>Alle billetter</h2>
+    <div id="output"></div>
+<br>
+   <button onclick="slettAlleBilletter()">Slett alle billettene</button>
+</body>
+</html>
