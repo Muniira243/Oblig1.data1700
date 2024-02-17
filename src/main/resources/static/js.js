@@ -1,3 +1,4 @@
+let filmKjopBillet = [];
 function validering(){
     let film = document.getElementById("film").value;
     let antall = document.getElementById("antall").value;
@@ -14,8 +15,7 @@ function validering(){
         ut.innerHTML = "Velg en Film!";
         ut.style.color = "red";
         boolean = false;
-    }
-    else{
+    } else{
         document.getElementById("filmUt").innerHTML = "";
     }
 
@@ -24,12 +24,11 @@ function validering(){
         ut.innerHTML = "Må skrive noe inn i Antall!";
         ut.style.color = "red";
         boolean = false;
-    }
-    else {
+    } else {
         document.getElementById("feilAntall").innerHTML = "";
     }
 
-    if(!fornavnInput.trim()){
+    if(!fornavnInput.value.trim()){
         let ut=document.getElementById("fornavnFeilmelding");
         ut.innerHTML = "Må skrive noe inn i Fornavn!";
         ut.style.color = "red";
@@ -39,13 +38,12 @@ function validering(){
         document.getElementById("fornavnFeilmelding").innerHTML = "";
     }
 
-    if(!etternavnInput.trim()){
+    if(!etternavnInput.value.trim()){
         let ut=document.getElementById("etternavnFeilmelding");
         ut.innerHTML = "Må skrive noe inn i Etternavn!";
         ut.style.color = "red";
         boolean = false;
-    }
-    else{
+    } else{
         document.getElementById("etternavnFeilmelding").innerHTML = "";
     }
 
@@ -55,8 +53,7 @@ function validering(){
         ut.innerHTML = "Ugyldig telefonnr!";
         ut.style.color = "red";
         boolean = false;
-    }
-    else {
+    } else {
         document.getElementById("telefonnrFeilmelding").innerHTML = "";
     }
     const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -65,15 +62,11 @@ function validering(){
         ut.innerHTML = "Ugyldig Epost!";
         ut.style.color = "red";
         boolean = false;
-    }
-    else {
+    } else {
         document.getElementById("epostFeilmelding").innerHTML = "";
     }
     return boolean;
 }
-
-
-let filmKjopBillet = [];
 let ut;
 let billett;
 function kjopBillett() {
@@ -101,7 +94,7 @@ function kjopBillett() {
             "</tr>";
         for (let b of filmKjopBillet) {
             ut += "<tr>";
-            ut += "<td>" + b.film + "</td><td>" + b.antall + "</td><td>" + b.fornavn + "</td><td>" + b.etternavn + "</td><td>" + b.telefonnr + "</td><td>" + b.epost + "</td>";
+            ut += "<td>" + b.film + "</td><td>" +"&nbsp;&nbsp" + b.antall + "</td><td>" + b.fornavn + "</td><td>" + b.etternavn + "</td><td>" + b.telefonnr + "</td><td>" + b.epost + "</td>";
             ut += "</tr>";
         }
         ut += "</table>";
@@ -120,4 +113,4 @@ function slettAlleBilletter() {
     filmKjopBillet = [];
     let output = document.getElementById("output");
     output.innerHTML = "";
-            }
+}

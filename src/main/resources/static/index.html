@@ -10,10 +10,9 @@
 <h1>Bestilling av kinobiletter</h1>
 <table>
 <tr>
-    <td>Velg Film:</td>
-    </tr>
-<tr><td><select id="film">
-    <option value = " " disabled selected> Velg film her</option>
+    <td>Velg Film:
+    <select id="film">
+    <option value ="" selected> Velg film her</option>
     <option>The Shining</option>
     <option>The Exorcist</option>
     <option>Psycho</option>
@@ -22,35 +21,57 @@
     <option>The Conjuring</option>
     <option>IT</option>
     <option>Get Out</option>
-</select>
+    </select>
     </td>
-   <td><div id="filmUt"></div></td></tr>
+    <td><div id="filmUt"></div></td>
+</tr>
 </table>
 <br>
 <table>
    <tr>
        <td style= "font-size: 18px; font-weight: bolder;">Antall</td>
-       <td><input type="text" style="width: 25px" id="antall"/></td>
-       <td><div id="feilAntall"></div></td>
+       <td>
+           <input type="text" style="width: 25px" id="antall"/>
+       <span id="feilAntall" style="color : red;"></span>
+   </td>
    </tr>
 </table>
 <br>
 <table>
+    <tr>
+        <td>Fornavn</td>
+    <td>
+        <input type="text" id="fornavn"/>
+   <span id="fornavnFeilmelding" style="color: red;"></span>
+    </td>
+    </tr>
 
-<tr><td>Fornavn</td><td><input type="text" id="fornavn"/></td>
-    <td><div id="fornavnFeilmelding"></div></td></tr>
+<tr>
+    <td>Etternavn</td>
+    <td>
+        <input type="text" id="etternavn"/>
+        <span id="etternavnFeilmelding" style ="color:red"></span>
+    </td>
+</tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td>
+            <input type="text" id="telefonnr"/>
+        <span id="telefonnrFeilmelding" style = "color : red;"></span>
+        </td>
+    </tr>
 
-<tr><td>Etternavn</td><td><input type="text" id="etternavn"/></td>
-    <td><div id="etternavnFeilmelding"></div></td></tr>
-
-    <tr><td>Telefonnr</td><td><input type="text" id="telefonnr"/></td>
-        <td><div id="telefonnrFeilmelding"></div></td></tr>
-
-    <tr><td>Epost</td><td><input type="text" id="epost"/></td>
-    <td><div id="epostFeilmelding"></div></td></tr>
+    <tr>
+        <td>Epost</td>
+        <td>
+            <input type="text" id="epost"/>
+            <span id="epostFeilmelding" style="color : red;"></span>
+    </td>
+    </tr>
 </table>
 
 <button onclick="kjopBillett()">Kjøp billett</button>
+<span id="kjop-feil" style="color: red;"></span>
 
     <h2>Alle billetter</h2>
     <div id="output"></div>
